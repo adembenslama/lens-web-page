@@ -266,8 +266,6 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-1.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
-<<<<<<< HEAD
-=======
     videoUrl: "/videos/events.mp4",
     features: [
       "Captation vidéo haute définition",
@@ -282,7 +280,6 @@ export const benefits = [
       { name: "DaVinci Resolve", icon: davinci },
       { name: "Photoshop", icon: photoshop }
     ]
->>>>>>> bc06eb7 (Reinitialize repository)
   },
   {
     id: "1",
@@ -291,9 +288,6 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-2.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
-<<<<<<< HEAD
-    light: true,
-=======
     videoUrl: "/videos/industrial.mp4",
     features: [
       "Vidéos de processus industriels",
@@ -308,7 +302,6 @@ export const benefits = [
       { name: "DaVinci Resolve", icon: davinci }
     ],
     light: true
->>>>>>> bc06eb7 (Reinitialize repository)
   },
   {
     id: "2",
@@ -317,8 +310,6 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
-<<<<<<< HEAD
-=======
     videoUrl: "/videos/sports.mp4",
     features: [
       "Captation multi-caméras",
@@ -332,7 +323,6 @@ export const benefits = [
       { name: "After Effects", icon: after },
       { name: "DaVinci Resolve", icon: davinci }
     ]
->>>>>>> bc06eb7 (Reinitialize repository)
   },
   {
     id: "3",
@@ -341,9 +331,6 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-4.svg",
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
-<<<<<<< HEAD
-    light: true,
-=======
     videoUrl: "/videos/wedding.mp4",
     features: [
       "Style cinématographique",
@@ -358,7 +345,6 @@ export const benefits = [
       { name: "Lightroom", icon: lightroom }
     ],
     light: true
->>>>>>> bc06eb7 (Reinitialize repository)
   },
   {
     id: "4",
@@ -367,8 +353,6 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
-<<<<<<< HEAD
-=======
     videoUrl: "/videos/documentary.mp4",
     features: [
       "Narration engageante",
@@ -383,7 +367,6 @@ export const benefits = [
       { name: "DaVinci Resolve", icon: davinci },
       { name: "Dehancer", icon: dehancer }
     ]
->>>>>>> bc06eb7 (Reinitialize repository)
   },
   {
     id: "5",
@@ -392,9 +375,6 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
-<<<<<<< HEAD
-  },
-=======
     videoUrl: "/videos/graphics.mp4",
     features: [
       "Design créatif",
@@ -409,7 +389,6 @@ export const benefits = [
       { name: "Canva", icon: canva }
     ]
   }
->>>>>>> bc06eb7 (Reinitialize repository)
 ];
 
 export const socials = [
