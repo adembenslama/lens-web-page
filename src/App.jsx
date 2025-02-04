@@ -8,6 +8,7 @@ import Hero from "./components/Hero";
 
 import Services from "./components/Services";
 import ServiceDetails from "./pages/ServiceDetails";
+import WeddingService from "./pages/WeddingService";
 import ContactForm from "./components/ContactForm";
 import Team from "./components/Team";
 
@@ -30,6 +31,16 @@ const App = () => {
                 <Footer />
               </>
             }
+          />
+          <Route 
+            path="/service/3" 
+            element={
+              <>
+                <WeddingService />
+                <ContactForm />
+                <Footer />
+              </>
+            } 
           />
           <Route 
             path="/service/:id" 
