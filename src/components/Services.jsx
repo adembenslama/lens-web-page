@@ -1,23 +1,15 @@
 import Section from "./Section";
 import Heading from "./Heading";
 import { service1, service2, service3, check } from "../assets";
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
-import {
-  PhotoChatMessage,
-  Gradient,
-  VideoBar,
-  VideoChatMessage,
-} from "./design/Services";
-
-import Generating from "./Generating";
+import { Gradient } from "./design/Services";
 
 const Services = () => {
   return (
     <Section id="how-to-use">
       <div className="container">
         <Heading
-          title="Generative AI made for creators."
-          text="Brainwave unlocks the potential of AI-powered applications"
+          title="Nos Services Professionnels"
+          text="Des solutions audiovisuelles sur mesure pour tous vos besoins"
         />
 
         <div className="relative">
@@ -26,31 +18,36 @@ const Services = () => {
               <img
                 className="w-full h-full object-cover md:object-right"
                 width={800}
-                alt="Smartest AI"
+                alt="Production Vidéo"
                 height={730}
                 src={service1}
               />
             </div>
 
             <div className="relative z-1 max-w-[17rem] ml-auto">
-              <h4 className="h4 mb-4">Smartest AI</h4>
+              <h4 className="h4 mb-4">Production Vidéo</h4>
               <p className="body-2 mb-[3rem] text-n-3">
-                Brainwave unlocks the potential of AI-powered applications
+                Une expertise complète en production audiovisuelle professionnelle
               </p>
               <ul className="body-2">
-                {brainwaveServices.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start py-4 border-t border-n-6"
-                  >
-                    <img width={24} height={24} src={check} />
-                    <p className="ml-4">{item}</p>
-                  </li>
-                ))}
+                <li className="flex items-start py-4 border-t border-n-6">
+                  <img width={24} height={24} src={check} />
+                  <p className="ml-4">Films d'entreprise</p>
+                </li>
+                <li className="flex items-start py-4 border-t border-n-6">
+                  <img width={24} height={24} src={check} />
+                  <p className="ml-4">Vidéos promotionnelles</p>
+                </li>
+                <li className="flex items-start py-4 border-t border-n-6">
+                  <img width={24} height={24} src={check} />
+                  <p className="ml-4">Captation d'événements</p>
+                </li>
+                <li className="flex items-start py-4 border-t border-n-6">
+                  <img width={24} height={24} src={check} />
+                  <p className="ml-4">Montage professionnel</p>
+                </li>
               </ul>
             </div>
-
-            <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg-right-auto lg:bottom-8 lg:-translate-x-1/2" />
           </div>
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
@@ -61,64 +58,68 @@ const Services = () => {
                   className="h-full w-full object-cover"
                   width={630}
                   height={750}
-                  alt="robot"
+                  alt="Photographie"
                 />
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-                <h4 className="h4 mb-4">Photo editing</h4>
+                <h4 className="h4 mb-4">Photographie</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
-                  Automatically enhance your photos using our AI app&apos;s
-                  photo editing feature. Try it now!
+                  Services photo professionnels pour tous vos projets : événements, portraits, produits
                 </p>
+                <ul className="body-2 text-n-3">
+                  <li className="flex items-center mb-3">
+                    <img width={20} height={20} src={check} className="mr-3" />
+                    Photos d'événements
+                  </li>
+                  <li className="flex items-center mb-3">
+                    <img width={20} height={20} src={check} className="mr-3" />
+                    Portraits professionnels
+                  </li>
+                  <li className="flex items-center">
+                    <img width={20} height={20} src={check} className="mr-3" />
+                    Photos de produits
+                  </li>
+                </ul>
               </div>
-
-              <PhotoChatMessage />
             </div>
 
             <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                <h4 className="h4 mb-4">Video generation</h4>
+                <h4 className="h4 mb-4">Services Spécialisés</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world’s most powerful AI photo and video art generation
-                  engine. What will you create?
+                  Des services sur mesure pour répondre à vos besoins spécifiques
                 </p>
 
-                <ul className="flex items-center justify-between">
-                  {brainwaveServicesIcons.map((item, index) => (
-                    <li
-                      key={index}
-                      className={`rounded-2xl flex items-center justify-center ${
-                        index === 2
-                          ? "w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]"
-                          : "flex w-10 h-10 bg-n-6 md:w-15 md:h-15"
-                      }`}
-                    >
-                      <div
-                        className={
-                          index === 2
-                            ? "flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]"
-                            : ""
-                        }
-                      >
-                        <img src={item} width={24} height={24} alt={item} />
-                      </div>
-                    </li>
-                  ))}
+                <ul className="grid gap-5">
+                  <li className="flex items-center p-4 bg-n-6 rounded-xl">
+                    <div className="flex items-center justify-center w-10 h-10 bg-n-5 rounded-xl mr-4">
+                      <img src={service3} width={24} height={24} alt="Drone" />
+                    </div>
+                    <div>
+                      <h6 className="text-n-1 font-semibold mb-1">Prises de vue aériennes</h6>
+                      <p className="text-n-3 text-sm">Captation par drone professionnel</p>
+                    </div>
+                  </li>
+                  <li className="flex items-center p-4 bg-n-6 rounded-xl">
+                    <div className="flex items-center justify-center w-10 h-10 bg-n-5 rounded-xl mr-4">
+                      <img src={service3} width={24} height={24} alt="Live" />
+                    </div>
+                    <div>
+                      <h6 className="text-n-1 font-semibold mb-1">Streaming en direct</h6>
+                      <p className="text-n-3 text-sm">Diffusion live d'événements</p>
+                    </div>
+                  </li>
+                  <li className="flex items-center p-4 bg-n-6 rounded-xl">
+                    <div className="flex items-center justify-center w-10 h-10 bg-n-5 rounded-xl mr-4">
+                      <img src={service3} width={24} height={24} alt="Motion" />
+                    </div>
+                    <div>
+                      <h6 className="text-n-1 font-semibold mb-1">Motion Design</h6>
+                      <p className="text-n-3 text-sm">Animation et effets visuels</p>
+                    </div>
+                  </li>
                 </ul>
-              </div>
-
-              <div className="relative h-[20rem] bg-n-8 rounded-xl overflow-hidden md:h-[25rem]">
-                <img
-                  src={service3}
-                  className="w-full h-full object-cover"
-                  width={520}
-                  height={400}
-                  alt="Scary robot"
-                />
-
-                <VideoChatMessage />
-                <VideoBar />
               </div>
             </div>
           </div>

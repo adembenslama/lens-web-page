@@ -27,7 +27,7 @@ const App = () => {
                 <Collaboration />
                 <Services />
                 <Team />
-                <Roadmap />
+             
                 <ContactForm />
               </>
             }

@@ -61,31 +61,19 @@ export const navigation = [
   },
   {
     id: "1",
-    title: "Extraits",
-    url: "#pricing",
-  },
-  {
-    id: "2",
-    title: "À propos",
+    title: "Nos Réalisations",
     url: "#how-to-use",
   },
   {
+    id: "2",
+    title: "Notre Équipe",
+    url: "#team",
+  },
+  {
     id: "3",
-    title: "Contacter nous",
-    url: "#roadmap",
-  },
-  {
-    id: "4",
-    title: "New account",
-    url: "#signup",
-    onlyMobile: true,
-  },
-  {
-    id: "5",
-    title: "Sign in",
-    url: "#login",
-    onlyMobile: true,
-  },
+    title: "Contact",
+    url: "#contact",
+  }
 ];
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
