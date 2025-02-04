@@ -10,6 +10,7 @@ import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import ServiceDetails from "./pages/ServiceDetails";
 import ContactForm from "./components/ContactForm";
+import Team from "./components/Team";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
                 <Benefits />
                 <Collaboration />
                 <Services />
+                <Team />
                 <Roadmap />
                 <ContactForm />
               </>

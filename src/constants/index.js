@@ -423,3 +423,41 @@ export const socials = [
     url: "#",
   },
 ];
+
+export const teamMembers = [
+  {
+    id: "0",
+    name: "Walid Ben Slama",
+    role: "Fondateur & Directeur Créatif",
+    image: "/team/founder.jpg",
+    description: "Expert en production audiovisuelle avec plus de 10 ans d'expérience dans la création de contenu de haute qualité.",
+    expertise: [
+      "Direction créative",
+      "Production vidéo",
+      "Photographie",
+      "Montage"
+    ],
+    social: {
+      linkedin: "https://linkedin.com/in/adem-ben-slama",
+      instagram: "https://instagram.com/adem.benslama",
+      facebook: "https://facebook.com/adem.benslama"
+    }
+  },
+  {
+    id: "1",
+    name: "Wael Arifa",
+    role: "Co-Fondateur & DirecteurArtistique",
+    image: "/team/cofounder.jpg",
+    description: "Spécialiste en design graphique et direction artistique, avec une passion pour la création d'identités visuelles uniques.",
+    expertise: [
+      "Direction artistique",
+      "Design graphique",
+ 
+    ],
+    social: {
+      linkedin: "https://linkedin.com/in/sarah-laurent",
+      instagram: "https://instagram.com/sarah.laurent",
+      facebook: "https://facebook.com/sarah.laurent"
+    }
+  }
+];
