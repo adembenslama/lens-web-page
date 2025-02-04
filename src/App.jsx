@@ -5,8 +5,7 @@ import Collaboration from "./components/Collaboration";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Pricing from "./components/Pricing";
-import Roadmap from "./components/Roadmap";
+
 import Services from "./components/Services";
 import ServiceDetails from "./pages/ServiceDetails";
 import ContactForm from "./components/ContactForm";
@@ -16,25 +15,33 @@ const App = () => {
   return (
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
-        <Header />
         <Routes>
           <Route
             path="/"
             element={
               <>
+                <Header />
                 <Hero />
                 <Benefits />
                 <Collaboration />
                 <Services />
                 <Team />
-             
                 <ContactForm />
+                <Footer />
               </>
             }
           />
-          <Route path="/service/:id" element={<ServiceDetails />} />
+          <Route 
+            path="/service/:id" 
+            element={
+              <>
+                <ServiceDetails />
+                <ContactForm />
+                <Footer />
+              </>
+            } 
+          />
         </Routes>
-        <Footer />
       </div>
       <ButtonGradient />
     </>
