@@ -50,6 +50,7 @@ import {
   techniplast,
   telegram,
   twitter,
+  walid,
   yourlogo,
 } from "../assets";
 
@@ -417,7 +418,7 @@ export const teamMembers = [
     id: "0",
     name: "Walid Ben Slama",
     role: "Fondateur & Directeur Créatif",
-    image: "/team/founder.jpg",
+    image: walid,
     description: "Expert en production audiovisuelle avec plus de 10 ans d'expérience dans la création de contenu de haute qualité.",
     expertise: [
       "Direction créative",
@@ -427,8 +428,8 @@ export const teamMembers = [
     ],
     social: {
       linkedin: "https://linkedin.com/in/adem-ben-slama",
-      instagram: "https://instagram.com/adem.benslama",
-      facebook: "https://facebook.com/adem.benslama"
+      instagram: "https://www.instagram.com/walid_benslama_photoart/",
+      facebook: "https://www.facebook.com/photobenslama"
     }
   },
   {
@@ -443,9 +444,9 @@ export const teamMembers = [
  
     ],
     social: {
-      linkedin: "https://linkedin.com/in/sarah-laurent",
-      instagram: "https://instagram.com/sarah.laurent",
-      facebook: "https://facebook.com/sarah.laurent"
+      linkedin: "https://linkedin.com/in/",
+      instagram: "https://instagram.com/",
+      facebook: "https://facebook.com/"
     }
   }
 ];

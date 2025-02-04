@@ -60,14 +60,7 @@ const Team = () => {
 
                     {/* Social Links */}
                     <div className="flex gap-4">
-                      <a
-                        href={member.social.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-n-6"
-                      >
-                        <img src={socialIcons.linkedin} width={16} height={16} alt="LinkedIn" />
-                      </a>
+                     
                       <a
                         href={member.social.instagram}
                         target="_blank"

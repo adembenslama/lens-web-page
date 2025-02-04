@@ -37,7 +37,7 @@ const Hero = () => {
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
           Nous créons des contenus audiovisuels professionnels et percutants pour les grandes entreprises et industries, en mettant en valeur vos produits et projets avec expertise et approche sur mesure.          </p>
-          <Button href="#roadmap" white>
+          <Button href="#contact" white>
 Commencer          </Button>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">

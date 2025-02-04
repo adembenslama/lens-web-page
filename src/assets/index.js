@@ -27,6 +27,8 @@ import heroBackground from "./hero/hero-background.jpg";
 
 import videointro from "./videos/test.mp4"
 
+import lensLogo from "./lens-logo.svg";
+import walid from "./team/walid.jpg";
 //companies
 import asmd from "./companies/asmd.png";
 import bizerta from "./companies/bizerta.png";
@@ -201,5 +203,6 @@ export {
   instagram,
   telegram,
   twitter,
-
+  lensLogo,
+  walid,
 };
