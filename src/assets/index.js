@@ -101,12 +101,13 @@ import benefitIcon2 from "./benefits/icon-2.svg";
 import benefitIcon3 from "./benefits/icon-3.svg";
 import benefitIcon4 from "./benefits/icon-4.svg";
 import benefitImage2 from "./benefits/image-2.png";
-
+import editing from "./editing.jpg";
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
 import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
+import bebe from "./bebe.jpg";
 
 export {
   brainwave,
@@ -122,6 +123,7 @@ export {
   yourlogo,
   homeSmile,
   file02,
+  editing,
   searchMd,
   plusSquare,
   recording03,
@@ -155,7 +157,7 @@ export {
   printing ,
   sport,
   rings,
-
+  bebe,
   figma,
   framer,
   notion,
@@ -205,4 +207,5 @@ export {
   twitter,
   lensLogo,
   walid,
+
 };

@@ -5,12 +5,12 @@ import Collaboration from "./components/Collaboration";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-
 import Services from "./components/Services";
 import ServiceDetails from "./pages/ServiceDetails";
 import WeddingService from "./pages/WeddingService";
 import ContactForm from "./components/ContactForm";
 import Team from "./components/Team";
+import Featured from "./components/Featured";
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
               <>
                 <Header />
                 <Hero />
+                <Featured />
                 <Benefits />
                 <Collaboration />
                 <Services />

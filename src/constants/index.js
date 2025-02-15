@@ -62,16 +62,21 @@ export const navigation = [
   },
   {
     id: "1",
+    title: "À la Une",
+    url: "#featured",
+  },
+  {
+    id: "2",
     title: "Nos Réalisations",
     url: "#how-to-use",
   },
   {
-    id: "2",
+    id: "3",
     title: "Notre Équipe",
     url: "#team",
   },
   {
-    id: "3",
+    id: "4",
     title: "Contact",
     url: "#contact",
   }
