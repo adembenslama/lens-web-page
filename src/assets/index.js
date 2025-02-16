@@ -90,6 +90,11 @@ import notification2 from "./notification/image-2.png";
 import notification3 from "./notification/image-3.png";
 import notification4 from "./notification/image-4.png";
 
+import anniversary from "./banners/10ans.png";
+import podcast from "./banners/podcast.png";
+import stroyteller from "./banners/storyteller.png";
+import werun from "./banners/werun.png";
+
 import benefitCard1 from "./benefits/card-1.svg";
 import benefitCard2 from "./benefits/card-2.svg";
 import benefitCard3 from "./benefits/card-3.svg";
@@ -110,6 +115,11 @@ import twitter from "./socials/twitter.svg";
 import bebe from "./bebe.jpg";
 
 export {
+
+  anniversary,
+  podcast,
+  stroyteller,
+  werun,
   brainwave,
   check,
   check2,
