@@ -34,7 +34,7 @@ const App = () => {
             }
           />
           <Route 
-            path="/service/3" 
+            path="/services/mariage-films" 
             element={
               <>
                 <WeddingService />
@@ -44,10 +44,50 @@ const App = () => {
             } 
           />
           <Route 
-            path="/service/:id" 
+            path="/services/evenements" 
             element={
               <>
-                <ServiceDetails />
+                <ServiceDetails serviceSlug="evenements" />
+                <ContactForm />
+                <Footer />
+              </>
+            } 
+          />
+          <Route 
+            path="/services/production-industrielle" 
+            element={
+              <>
+                <ServiceDetails serviceSlug="production-industrielle" />
+                <ContactForm />
+                <Footer />
+              </>
+            } 
+          />
+          <Route 
+            path="/services/evenements-sportifs" 
+            element={
+              <>
+                <ServiceDetails serviceSlug="evenements-sportifs" />
+                <ContactForm />
+                <Footer />
+              </>
+            } 
+          />
+          <Route 
+            path="/services/documentaires" 
+            element={
+              <>
+                <ServiceDetails serviceSlug="documentaires" />
+                <ContactForm />
+                <Footer />
+              </>
+            } 
+          />
+          <Route 
+            path="/services/graphisme" 
+            element={
+              <>
+                <ServiceDetails serviceSlug="graphisme" />
                 <ContactForm />
                 <Footer />
               </>

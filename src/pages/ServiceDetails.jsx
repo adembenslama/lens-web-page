@@ -5,18 +5,26 @@ import Button from '../components/Button';
 import { check } from '../assets';
 import ServiceHeader from '../components/ServiceHeader';
 
-const ServiceDetails = () => {
-  const { id } = useParams();
-  const service = benefits.find((benefit) => benefit.id === id);
+const ServiceDetails = ({ serviceSlug }) => {
+  const serviceMap = {
+    'evenements': '0',
+    'production-industrielle': '1',
+    'evenements-sportifs': '2',
+    'mariage-films': '3',
+    'documentaires': '4',
+    'graphisme': '5'
+  };
+
+  const service = benefits.find((benefit) => benefit.id === serviceMap[serviceSlug]);
 
   if (!service) {
     return (
       <>
         <ServiceHeader />
         <Section className="text-center">
-          <h2 className="h2">Service not found</h2>
+          <h2 className="h2">Service non trouvé</h2>
           <Button href="/" className="mt-8">
-            Return to Home
+            Retour à l'accueil
           </Button>
         </Section>
       </>

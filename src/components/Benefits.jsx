@@ -7,6 +7,18 @@ import ClipPath from "../assets/svg/ClipPath";
 import { Link } from "react-router-dom";
 
 const Benefits = () => {
+  const getServiceSlug = (id) => {
+    const slugMap = {
+      '0': 'evenements',
+      '1': 'production-industrielle',
+      '2': 'evenements-sportifs',
+      '3': 'mariage-films',
+      '4': 'documentaires',
+      '5': 'graphisme'
+    };
+    return slugMap[id];
+  };
+
   return (
     <Section id="features">
       <div className="container relative z-2">
@@ -18,7 +30,7 @@ const Benefits = () => {
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
             <Link
-              to={`/service/${item.id}`}
+              to={`/services/${getServiceSlug(item.id)}`}
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
               style={{
                 backgroundImage: `url(${item.backgroundUrl})`,
