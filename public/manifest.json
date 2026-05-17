@@ -1,0 +1,17 @@
+{
+  "name": "LENS Production - Professional Videography Tunisia",
+  "short_name": "LENS Production",
+  "description": "Professional wedding and sports videography services in Tunisia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#DC2626",
+  "icons": [
+    {
+      "src": "/images/fullLogo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
