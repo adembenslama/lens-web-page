@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/fullLogo.svg',
+        url: 'https://lensproduction.tn/images/fullLogo.svg',
         width: 1200,
         height: 630,
         alt: 'LENS Production Wedding Services',
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Wedding Videography Services | LENS Production',
     description: 'Professional wedding videography and photography in Tunisia.',
-    images: ['/images/fullLogo.svg'],
+    images: ['https://lensproduction.tn/images/fullLogo.svg'],
   },
   alternates: {
-    canonical: '/weddings',
+    canonical: 'https://lensproduction.tn/weddings',
   },
 };
 

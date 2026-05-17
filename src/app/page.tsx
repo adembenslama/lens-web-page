@@ -103,7 +103,7 @@ export default function Home() {
       description: 'High-quality commercial videos and brand content for businesses and products.',
       thumbnail: 'https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=1200&h=800&fit=crop',
       tags: ['Commercial', 'Branding', 'Production'],
-      link: '/commercial'
+      link: '/corporate'
     },
     {
       id: 5,
@@ -241,10 +241,10 @@ export default function Home() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
-              {['Work', 'Showreel', 'Team', 'Partners', 'Contact', 'Weddings', 'Sports'].map((item) => (
+              {['Work', 'Showreel', 'Team', 'Partners', 'Contact', 'Weddings', 'Sports', 'Corporate'].map((item) => (
                 <motion.a
                   key={item}
-                  href={item === 'Weddings' ? '/weddings' : item === 'Sports' ? '/sports' : `#${item.toLowerCase()}`}
+                  href={item === 'Weddings' ? '/weddings' : item === 'Sports' ? '/sports' : item === 'Corporate' ? '/corporate' : `#${item.toLowerCase()}`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="text-gray-300 hover:text-white transition-colors cursor-pointer relative group"
@@ -289,10 +289,10 @@ export default function Home() {
               className="md:hidden bg-[#0A0A0A]/95 backdrop-blur-xl border-t border-white/10"
             >
               <div className="px-4 py-6 space-y-4">
-                {['Work', 'Showreel', 'Team', 'Partners', 'Contact', 'Weddings', 'Sports'].map((item) => (
+                {['Work', 'Showreel', 'Team', 'Partners', 'Contact', 'Weddings', 'Sports', 'Corporate'].map((item) => (
                   <a
                     key={item}
-                    href={item === 'Weddings' ? '/weddings' : item === 'Sports' ? '/sports' : `#${item.toLowerCase()}`}
+                    href={item === 'Weddings' ? '/weddings' : item === 'Sports' ? '/sports' : item === 'Corporate' ? '/corporate' : `#${item.toLowerCase()}`}
                     onClick={() => setMobileMenuOpen(false)}
                     className="block text-gray-300 hover:text-white transition-colors cursor-pointer py-2"
                   >

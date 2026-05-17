@@ -35,9 +35,8 @@ export const metadata: Metadata = {
   authors: [{ name: "Walid Benslama", url: "https://www.instagram.com/walid_benslama_photography" }],
   creator: "LENS Production",
   publisher: "LENS Production",
-  metadataBase: new URL('https://lensproduction.tn'),
   alternates: {
-    canonical: '/',
+    canonical: 'https://lensproduction.tn/',
   },
   openGraph: {
     type: 'website',
@@ -48,7 +47,7 @@ export const metadata: Metadata = {
     siteName: 'LENS Production',
     images: [
       {
-        url: '/images/fullLogo.svg',
+        url: 'https://lensproduction.tn/images/fullLogo.svg',
         width: 1200,
         height: 630,
         alt: 'LENS Production Logo',
@@ -59,7 +58,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'LENS Production - Professional Wedding & Sports Videography',
     description: 'Professional videography and photography services in Tunisia. 10 years of experience.',
-    images: ['/images/fullLogo.svg'],
+    images: ['https://lensproduction.tn/images/fullLogo.svg'],
   },
   robots: {
     index: true,
