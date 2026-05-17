@@ -435,19 +435,19 @@ export default function Home() {
             {!showreelPlaying && (
               <>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
-                <div className="absolute inset-0 flex items-center justify-center z-20">
+                <div className="absolute inset-0 flex items-center justify-center z-20 pb-16 sm:pb-0">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="w-28 h-28 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-2xl"
+                    className="w-20 h-20 sm:w-28 sm:h-28 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-2xl"
                   >
-                    <svg className="w-12 h-12 text-white ml-2" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 sm:w-12 sm:h-12 text-white ml-1 sm:ml-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                   </motion.div>
                 </div>
-                <div className="absolute bottom-8 left-8 right-8 z-20 text-white">
-                  <h3 className="text-3xl font-bold mb-2">Our Story in Motion</h3>
-                  <p className="text-white/80 text-lg">A showcase of our finest work</p>
+                <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 z-20 text-white">
+                  <h3 className="text-xl sm:text-3xl font-bold mb-1 sm:mb-2">Our Story in Motion</h3>
+                  <p className="text-white/80 text-sm sm:text-lg">A showcase of our finest work</p>
                 </div>
               </>
             )}
@@ -660,89 +660,93 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* Scrolling Logo Animation - 2 Rows */}
+          {/* Scrolling Logo Animation - Desktop: 2 Rows, Mobile: 4 Rows */}
           <div className="relative space-y-8">
-            {/* First Row - Scrolling Left */}
-            <div className="flex overflow-hidden">
-              <div className="flex animate-scroll-left gap-16 items-center">
-                {[...partners.slice(0, 7), ...partners.slice(0, 7)].map((partner, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 group relative"
-                  >
-                    <div className="w-40 h-24 flex items-center justify-center">
-                      <img
-                        src={`/clients/${partner}`}
-                        alt={partner.replace('.png', '').replace(/_/g, ' ')}
-                        className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      />
+            {/* Desktop View - 2 Rows */}
+            <div className="hidden md:block space-y-8">
+              {/* First Row - Scrolling Left */}
+              <div className="flex overflow-hidden">
+                <div className="flex animate-scroll-left gap-16 items-center">
+                  {[...partners.slice(0, 7), ...partners.slice(0, 7)].map((partner, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 group relative"
+                    >
+                      <div className="w-40 h-24 flex items-center justify-center">
+                        <img
+                          src={`/clients/${partner}`}
+                          alt={partner.replace('.png', '').replace(/_/g, ' ')}
+                          className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
                     </div>
-                    {/* Company Name on Hover */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 backdrop-blur-sm rounded-lg">
-                      <span className="text-white text-sm font-medium text-center px-2">
-                        {partner.replace('.png', '').replace(/_/g, ' ')}
-                      </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Second Row - Scrolling Right */}
+              <div className="flex overflow-hidden">
+                <div className="flex animate-scroll-right gap-16 items-center">
+                  {[...partners.slice(7), ...partners.slice(7)].map((partner, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 group relative"
+                    >
+                      <div className="w-40 h-24 flex items-center justify-center">
+                        <img
+                          src={`/clients/${partner}`}
+                          alt={partner.replace('.png', '').replace(/_/g, ' ')}
+                          className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Second Row - Scrolling Right */}
-            <div className="flex overflow-hidden">
-              <div className="flex animate-scroll-right gap-16 items-center">
-                {[...partners.slice(7), ...partners.slice(7)].map((partner, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 group relative"
-                  >
-                    <div className="w-40 h-24 flex items-center justify-center">
-                      <img
-                        src={`/clients/${partner}`}
-                        alt={partner.replace('.png', '').replace(/_/g, ' ')}
-                        className="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                      />
-                    </div>
-                    {/* Company Name on Hover */}
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/80 backdrop-blur-sm rounded-lg">
-                      <span className="text-white text-sm font-medium text-center px-2">
-                        {partner.replace('.png', '').replace(/_/g, ' ')}
-                      </span>
+            {/* Mobile View - 4 Rows (faster scrolling) */}
+            <div className="md:hidden space-y-6">
+              {[0, 1, 2, 3].map((rowIndex) => {
+                const startIdx = rowIndex * 4;
+                const rowPartners = partners.slice(startIdx, startIdx + 4);
+                if (rowPartners.length === 0) return null;
+                
+                return (
+                  <div key={rowIndex} className="flex overflow-hidden">
+                    <div className={`flex ${rowIndex % 2 === 0 ? 'animate-scroll-left' : 'animate-scroll-right'} gap-8 items-center`}>
+                      {[...rowPartners, ...rowPartners, ...rowPartners].map((partner, index) => (
+                        <div
+                          key={index}
+                          className="flex-shrink-0"
+                        >
+                          <div className="w-32 h-20 flex items-center justify-center">
+                            <img
+                              src={`/clients/${partner}`}
+                              alt={partner.replace('.png', '').replace(/_/g, ' ')}
+                              className="max-w-full max-h-full object-contain filter grayscale"
+                            />
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
 
-          {/* Stats */}
+          {/* Simple Text Instead of Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20"
+            className="mt-20 text-center"
           >
-            {[
-              { number: '500+', label: 'Projects Delivered' },
-              { number: '200+', label: 'Happy Clients' },
-              { number: '50+', label: 'Awards Won' },
-              { number: '10+', label: 'Years Experience' }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all"
-              >
-                <div className="text-5xl font-bold text-white mb-3">
-                  {stat.number}
-                </div>
-                <div className="text-gray-400 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
+            <p className="text-2xl md:text-3xl text-gray-300 font-light italic">
+              10 Years of Delivering Excellence
+            </p>
           </motion.div>
         </div>
       </section>
