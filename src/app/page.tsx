@@ -5,6 +5,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { PerspectiveCamera } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as THREE from 'three';
+import HeroCarousel from './components/HeroCarousel';
 
 function SimpleLines() {
   const linesRef = useRef<THREE.Group>(null);
@@ -305,93 +306,8 @@ export default function Home() {
         </AnimatePresence>
       </motion.nav>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, ease: "easeOut" }}
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="inline-block mb-6 px-6 py-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full text-sm font-medium"
-            >
-              <span className="text-white">
-                10 Years of Professional Excellence
-              </span>
-            </motion.div>
-            
-            <motion.h1
-              initial={{ opacity: 0, x: -80 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
-              className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
-            >
-              <span className="rgb-split-active">We Create</span>
-              <br />
-              <span className="text-white rgb-split-active">
-                Visual Magic
-              </span>
-            </motion.h1>
-            
-            <motion.p
-              initial={{ opacity: 0, x: -60 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.6, duration: 1, ease: "easeOut" }}
-              className="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed"
-            >
-              From marathons to weddings, commercial to documentaries - capturing your story with professional excellence in Tunisia
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8, duration: 1, ease: "easeOut" }}
-              className="flex flex-col sm:flex-row gap-6 justify-center"
-            >
-              <motion.a
-                href="#showreel"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group px-10 py-5 bg-[#DC2626] rounded-full text-white text-lg font-medium cursor-pointer shadow-2xl shadow-red-600/50 hover:shadow-red-600/70 transition-all flex items-center justify-center gap-3"
-              >
-                Watch Showreel
-                <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              </motion.a>
-              
-              <motion.a
-                href="#work"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-10 py-5 bg-white/5 backdrop-blur-sm border-2 border-white/20 rounded-full text-white text-lg font-medium cursor-pointer hover:bg-white/10 transition-all"
-              >
-                Explore Work
-              </motion.a>
-            </motion.div>
-          </motion.div>
-
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1 }}
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2"
-            >
-              <motion.div className="w-1.5 h-1.5 bg-white rounded-full"></motion.div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Hero Banner Carousel */}
+      <HeroCarousel />
 
       {/* Video Showreel Section */}
       <section id="showreel" className="relative py-32 px-4 sm:px-6 lg:px-8 z-10">
