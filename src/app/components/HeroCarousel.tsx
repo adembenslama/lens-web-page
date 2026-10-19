@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -117,7 +117,7 @@ export default function HeroCarousel() {
 
   const currentSlide = bannerSlides[currentIndex];
 
-  const slideVariants = {
+  const slideVariants: Variants = {
     enter: (dir: number) => ({
       opacity: 0,
       scale: 1.02,
@@ -129,7 +129,7 @@ export default function HeroCarousel() {
       x: 0,
       transition: {
         duration: 0.7,
-        ease: [0.25, 1, 0.5, 1]
+        ease: [0.25, 1, 0.5, 1] as const
       }
     },
     exit: (dir: number) => ({
@@ -138,7 +138,7 @@ export default function HeroCarousel() {
       x: dir > 0 ? -40 : 40,
       transition: {
         duration: 0.5,
-        ease: [0.25, 1, 0.5, 1]
+        ease: [0.25, 1, 0.5, 1] as const
       }
     })
   };
